@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/tbrYourDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            android:id="@+id/tvYourDetailsTbrTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/circular_std_black"
+            android:text="@string/your_details_label"
+            android:textSize="18sp" />
+    </Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tbrYourDetails"
+        android:alpha="0.4"
+        android:background="@color/term_conditions_label_color" />
+
+    <TextView
+        android:id="@+id/tvYourDetailsNameTxt"
+        style="@style/LoginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tbrYourDetails"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/name_label_details_page" />
+
+    <TextView
+        android:id="@+id/tvYourDetailsName"
+        style="@style/LoginEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvYourDetailsNameTxt"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:text="Anitan Thakur"
+        android:clickable="false"
+        android:focusable="false"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+         />
+
+    <View
+        android:id="@+id/viewBelowName"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvYourDetailsName"
+        android:alpha="0.4"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/term_conditions_label_color" />
+
+    <TextView
+        android:id="@+id/tvYourDetailsEmailTxt"
+        style="@style/LoginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewBelowName"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/email_label_login" />
+
+    <TextView
+        android:id="@+id/tvYourDetailsEmail"
+        style="@style/LoginEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_below="@id/tvYourDetailsEmailTxt"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="4dp"
+        tools:text="anitan@gmail.com"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+         />
+    <View
+        android:id="@+id/viewBelowEmail"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvYourDetailsEmail"
+        android:alpha="0.4"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/term_conditions_label_color" />
+
+
+
+    <TextView
+        android:id="@+id/tvYourDetailsPhoneTxt"
+        style="@style/LoginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewBelowEmail"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/cell_phone_number_label_details_page" />
+
+    <TextView
+        android:id="@+id/tvYourDetailsPhone"
+        style="@style/LoginEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvYourDetailsPhoneTxt"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="4dp"
+        android:clickable="false"
+        android:focusable="false"
+        tools:text="9888585806"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        />
+    <View
+        android:id="@+id/viewBelowPhone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvYourDetailsPhone"
+        android:alpha="0.4"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/term_conditions_label_color" />
+
+
+    <TextView
+        android:id="@+id/tvYourDetailsAddressTxt"
+        style="@style/LoginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewBelowPhone"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/address_label_details_page" />
+
+    <TextView
+        android:id="@+id/tvYourDetailsAddress"
+        style="@style/LoginEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvYourDetailsAddressTxt"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="4dp"
+        android:clickable="false"
+        android:focusable="false"
+        tools:text="CH Devi Lal Centre of Learning, Sector 28"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        />
+    <View
+        android:id="@+id/viewBelowAddress"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvYourDetailsAddress"
+        android:alpha="0.4"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/term_conditions_label_color" />
+
+
+    <LinearLayout
+        android:id="@+id/llYourDetailsConditions"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_above="@id/btnYourDetailsContinue"
+        android:layout_marginBottom="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/chkboxYourDetailsTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="4dp"
+            android:layout_gravity="center_vertical"
+            android:button="@drawable/checkbox_selector"
+            />
+        <TextView
+            android:id="@+id/tvYourDetailsTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/main_text_color"
+            android:layout_gravity="center_vertical"
+            android:text="@string/accept_terms_and_conditions_label_details_page"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnYourDetailsContinue"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        style="@style/BlueGradientButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/continue_label_details_page"
+        />
+
+
+
+</RelativeLayout>

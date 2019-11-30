@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/transparent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/ivMarkerIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dollar_marker_yellow"
+        android:contentDescription="@string/cdesc_marker_icon" />
+
+    <TextView
+        android:id="@+id/tvMarkerPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_filled_white_4dp_rounded"
+        android:layout_marginTop="4dp"
+        android:paddingTop="4dp"
+        android:textSize="12sp"
+        android:textColor="@color/main_text_color"
+        android:fontFamily="@font/circular_std_book"
+        android:paddingBottom="4dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        tools:text="$ 8000"
+        />
+
+</LinearLayout>

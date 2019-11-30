@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="2dp"
+        android:background="@drawable/back_filled_white_rounded_corner"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvItemCollectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circular_std_bold"
+            android:textColor="@color/main_text_color"
+            android:textSize="18sp"
+            tools:text="Welcome to ENCOBER" />
+
+        <TextView
+            android:id="@+id/tvItemCollectionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemCollectionTitle"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_wallet"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/circular_std_book"
+            android:gravity="center_vertical"
+            android:padding="2dp"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp"
+            tools:text="Ekerta" />
+
+        <TextView
+            android:id="@+id/tvItemCollectionAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemCollectionName"
+            android:layout_marginTop="8dp"
+            android:layout_toStartOf="@id/ivItemCollectionUserIcon"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/circular_std_book"
+            android:gravity="center_vertical"
+            android:padding="2dp"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp"
+            tools:text="169 Howell Common, Mexico, CDMX" />
+
+        <ImageView
+            android:id="@+id/ivItemCollectionUserIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemCollectionName"
+            android:layout_alignBottom="@id/tvItemCollectionAddress"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@string/cdesc_user_icon"
+            android:src="@drawable/ic_user"
+           />
+
+        <Button
+            android:id="@+id/btnItemCollectionCommission"
+            style="@style/AccentColorBorderButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/tvItemCollectionAddress"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/circular_std_bold"
+            android:textAllCaps="false"
+            tools:text="Commission $80.00"
+
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

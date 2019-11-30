@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorF2F2F2"
+    android:backgroundTint="@color/colorF2F2F2"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:id="@+id/tbrMyAccount"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/img_toolbar_back"
+        android:elevation="4dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:text="@string/my_account_label_main"
+            android:fontFamily="@font/circular_std_bold"
+            android:textSize="24sp"
+            android:gravity="top"
+            android:textColor="@color/white"
+            />
+
+    </Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMyAccountTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:elevation="4dp"
+        android:clipToPadding="false"
+        android:paddingEnd="0dp"
+        tools:listitem="@layout/item_my_account"
+        />
+
+        <RelativeLayout
+            android:id="@+id/rlMyAccountBarChart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_filled_white_rounded_corner"
+            android:layout_below="@id/rvMyAccountTop"
+            android:elevation="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:id="@+id/tvMyAccountAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="$2000"
+                style="@style/CommonBoldHeading"
+                />
+
+            <TextView
+                android:id="@+id/tvMyAccountMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="01 May - 30 May"
+                android:layout_alignParentEnd="true"
+                android:drawablePadding="12dp"
+                android:drawableStart="@drawable/ic_calendar"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/main_text_color"
+                android:fontFamily="@font/circular_std_book"
+                android:textSize="14sp"
+                />
+
+            <View
+                android:id="@+id/viewBelowMonthAmount"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:alpha="0.1"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/tvMyAccountAmount"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@color/colorAccent"
+                android:layout_below="@id/viewBelowMonthAmount"/>
+
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvMyAccountPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/back_filled_white_rounded_corner"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/circular_std_book"
+        android:gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="16dp"
+        android:layout_below="@id/rlMyAccountBarChart"
+        android:text="@string/payment_history_label_my_account"
+        android:textColor="@color/main_text_color"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/tvMyAccountEarnings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_filled_white_rounded_corner"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/circular_std_book"
+        android:gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="16dp"
+        android:layout_below="@id/tvMyAccountPayment"
+        android:text="@string/improve_your_earnings_label_my_account"
+        android:textColor="@color/main_text_color"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/tvMyAccountRecommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_filled_white_rounded_corner"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/circular_std_book"
+        android:gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="16dp"
+        android:layout_below="@id/tvMyAccountEarnings"
+        android:text="@string/recommend_to_encober_label_my_account"
+        android:textColor="@color/main_text_color"
+        android:textSize="14sp"
+        />
+
+</RelativeLayout>

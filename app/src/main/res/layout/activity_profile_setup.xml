@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/tbrProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:navigationIcon="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+       >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/circular_std_black"
+            android:text="@string/configure_your_profile_label"
+            android:textSize="18sp" />
+    </Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rlProfileStepProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tbrProfile"
+        >
+
+<!--
+        <CheckedTextView
+            android:id="@+id/chktvProfileBankData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_tab_bank_details"
+            android:fontFamily="@font/circular_std_bold"
+            android:gravity="center"
+            android:layout_marginStart="-20dp"
+            android:paddingStart="48dp"
+            android:layout_toEndOf="@id/chktvProfileMyAddress"
+            android:paddingEnd="8dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/bank_data_step_profile_page"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+-->
+
+        <CheckedTextView
+            android:id="@+id/chktvProfileMyAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_tab_bank_details"
+            android:fontFamily="@font/circular_std_bold"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginStart="-32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/chktvProfilePersonalInfo"
+            android:text="@string/my_address_step_profile_profile_page"
+            android:layout_marginTop="1dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <CheckedTextView
+            android:id="@+id/chktvProfilePersonalInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_tab_personal_information"
+            android:checked="true"
+            android:fontFamily="@font/circular_std_bold"
+            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:textAlignment="center"
+            android:paddingStart="54dp"
+            android:paddingEnd="72dp"
+            android:text="@string/personal_information_step_profile_page"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/flProfileSetupContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/rlProfileStepProgress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        tools:ignore="UselessLeaf" />
+
+
+
+</LinearLayout>

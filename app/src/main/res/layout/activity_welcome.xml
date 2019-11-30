@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivLoginBack"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/cdesc_back_button"
+        android:padding="4dp"
+        android:src="@drawable/ic_back" />
+
+    <FrameLayout
+        android:id="@+id/flLoginContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+
+
+
+</LinearLayout>

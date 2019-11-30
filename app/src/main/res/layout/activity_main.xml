@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/white"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <com.codebrew.encober.utils.NonSwipeableViewPager
+        android:id="@+id/viewPagerMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/viewAboveTabLayout"
+        />
+
+    <View
+        android:id="@+id/viewAboveTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.3"
+        android:background="@color/term_conditions_label_color"
+        android:elevation="4dp"
+        android:layout_above="@id/tabLayoutMain"
+         />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:elevation="4dp"
+        app:tabIndicator="@color/white"
+        app:tabSelectedTextColor="@color/main_tab_selected_color"
+        app:tabTextAppearance="@style/MainTabLayoutTextStyle"
+        app:tabTextColor="@color/main_tab_normal_color">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_selector_main_start"
+            android:text="@string/start_label_main" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_selector_main_my_account"
+            android:text="@string/my_videos_label_main" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_selector_main_notifications"
+            android:text="@string/notifications_label_main" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_selector_main_profile"
+            android:text="@string/profile_label_main" />
+    </com.google.android.material.tabs.TabLayout>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorF2F2F2"
+    android:backgroundTint="@color/colorF2F2F2">
+
+    <Toolbar
+        android:id="@+id/tbrSurveys"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/img_toolbar_back"
+        android:elevation="4dp"
+        android:navigationIcon="@drawable/ic_back_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:fontFamily="@font/circular_std_bold"
+            android:gravity="start"
+            android:paddingBottom="2dp"
+            android:text="@string/surveys_label_main_top_radio"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </Toolbar>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tbrSurveys"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:elevation="4dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/main_text_color"
+                android:layout_margin="16dp"
+                android:text="What do you think about the use \n of dummies?"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

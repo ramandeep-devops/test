@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white">
+
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/ivVideoDetailMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/ivVideoDetailBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/cdesc_back_button"
+        android:padding="8dp"
+        android:src="@drawable/ic_back_white" />
+
+    <TextView
+        android:id="@+id/tvVideoDetailHeading"
+        style="@style/CommonBoldHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivVideoDetailMain"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        tools:text="Welcome to ENCOBER" />
+
+    <TextView
+        android:id="@+id/tvVideoDetailDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvVideoDetailHeading"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0.7"
+        android:fontFamily="@font/circular_std_book"
+        android:textColor="@color/main_text_color"
+        android:textSize="14sp"
+        tools:text="Las 8 reglas que los despechos de cobranza
+deben cumplir, con el objetivo de que el gestor,
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+\n \n Las 8 reglas que los despechos de cobranza
+deben cumplir, con el objetivo de que el gestor,
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy." />
+
+</RelativeLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:padding="16dp">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivMyProfileDP"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:src="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_oval="true" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/ivMyProfileDP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivMyProfileDP"
+            app:layout_constraintTop_toTopOf="@id/ivMyProfileDP">
+
+            <TextView
+                android:id="@+id/tvMyProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circular_std_bold"
+                android:textColor="@color/main_text_color"
+                android:textSize="18sp"
+                tools:text="Anitan Thakur" />
+
+            <TextView
+                android:id="@+id/tvMyProfileID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circular_std_book"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp"
+                tools:text="ID : 123456" />
+
+            <TextView
+                android:id="@+id/tvMyProfileEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circular_std_book"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp"
+                tools:text="anitanthakur@hotmail.com" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMyProfileTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:drawableTop="@drawable/ic_batch"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/circular_std_book"
+            android:gravity="center_horizontal"
+            android:text="GOLD"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivMyProfileDP" />
+
+        <ProgressBar
+            android:id="@+id/pgbMyProfile"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:max="10"
+            android:progress="1"
+            android:progressDrawable="@drawable/back_progress_bar_active_my_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvMyProfileTag"
+            app:layout_constraintTop_toTopOf="@id/tvMyProfileTag" />
+
+
+        <LinearLayout
+            android:id="@+id/llMyProfileLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/tvMyProfileTag"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvMyProfileNextLevelTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circular_std_book"
+                android:text="@string/next_level_label_my_profile"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvMyProfileNextLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circular_std_bold"
+                android:text="Level 2"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnMyProfileEditProfile"
+            style="@style/AccentColorBorderButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/edit_profile_label"
+            app:layout_constraintTop_toBottomOf="@id/llMyProfileLevel" />
+
+        <TextView
+            android:id="@+id/tvMyProfileRecoverPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/circular_std_book"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="8dp"
+            android:text="@string/change_password_label_my_profile"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/btnMyProfileEditProfile" />
+
+        <TextView
+            android:id="@+id/tvMyProfilePrivateInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/circular_std_book"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp"
+            android:visibility="gone"
+            android:paddingBottom="8dp"
+            android:text="@string/private_information_label_my_profile"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvMyProfileRecoverPassword" />
+
+
+        <TextView
+            android:id="@+id/tvMyProfileContactENCOBER"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_chat"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/circular_std_book"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="8dp"
+            android:text="@string/contact_encober_label_my_profile"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvMyProfilePrivateInfo" />
+
+
+        <TextView
+            android:id="@+id/tvMyProfileTermsConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_term_conditions"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/circular_std_book"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="8dp"
+            android:text="@string/terms_and_conditions_label_adscreen"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvMyProfileContactENCOBER" />
+
+
+        <TextView
+            android:id="@+id/tvMyProfileSignOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_sign_out"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/circular_std_book"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="8dp"
+            android:text="@string/sign_off_label_my_profile"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvMyProfileTermsConditions" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

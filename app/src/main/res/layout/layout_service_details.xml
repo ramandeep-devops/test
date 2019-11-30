@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:id="@+id/tbrServiceDetails"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/img_toolbar_back"
+        android:elevation="4dp"
+        android:navigationIcon="@drawable/ic_back_white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/circular_std_bold"
+            android:text="@string/service_details_label"
+            android:paddingBottom="8dp"
+            android:gravity="start"
+            android:textSize="18sp"
+            />
+        <ImageView
+            android:id="@+id/ivServiceDetailsDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:contentDescription="@string/cdesc_delete_icon"
+            android:padding="4dp"
+            android:src="@drawable/ic_delete_white" />
+
+        <ImageView
+            android:id="@+id/ivServiceDetailsAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/cdesc_delete_icon"
+            android:padding="4dp"
+            android:src="@drawable/ic_user_white" />
+    </Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tbrServiceDetails">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+
+            <TextView
+                android:id="@+id/tvServiceDetailsHeading"
+                style="@style/CommonBoldHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Welcome to ENCOBER" />
+
+            <TextView
+                android:id="@+id/tvServiceDetailsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvServiceDetailsHeading"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_wallet"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/circular_std_book"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp"
+                tools:text="Eketra" />
+
+            <TextView
+                android:id="@+id/tvServiceDetailsPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvServiceDetailsName"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_percentage"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/circular_std_book"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp"
+                tools:text="Recompens $80.00" />
+
+
+            <TextView
+                android:id="@+id/tvServiceDetailsAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvServiceDetailsPercentage"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/circular_std_book"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp"
+                tools:text="169 Howell Common, Mexico, CDMX" />
+
+            <Button
+                android:id="@+id/btnServiceDetailsSeeMap"
+                style="@style/FullRoundedAccentColorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_below="@id/tvServiceDetailsAddress"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:text="@string/see_map_label_register_visit"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/viewBelowSeeMap"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/btnServiceDetailsSeeMap"
+                android:layout_marginTop="24dp"
+                android:alpha="0.1"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tvServiceDetailsContactTxt"
+                style="@style/CommonBoldHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewBelowSeeMap"
+                android:layout_marginTop="16dp"
+                android:text="@string/contact_label_register_visit"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvServiceDetailsPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvServiceDetailsContactTxt"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/circular_std_book"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp"
+                tools:text="(55) 5472 4905" />
+
+
+            <TextView
+                android:id="@+id/tvServiceDetailsMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvServiceDetailsPhone"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_mobile"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/circular_std_book"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/main_text_color"
+                android:textSize="14sp"
+                tools:text="(55) 5472 4905" />
+
+            <View
+                android:id="@+id/viewBelowMobile"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvServiceDetailsMobile"
+                android:layout_marginTop="24dp"
+                android:alpha="0.1"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tvServiceDetailsLastVisitTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewBelowMobile"
+                android:layout_marginTop="24dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/circular_std_book"
+                android:maxLines="1"
+                android:text="@string/last_visit_label_register_visit"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvServiceDetailsLastVisit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewBelowMobile"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/tvServiceDetailsLastVisitTxt"
+                android:layout_marginStart="16dp"
+                android:textAlignment="viewEnd"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/circular_std_book"
+                android:maxLines="1"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp"
+                android:text="@string/no_visit_so_far_label_service_details" />
+
+            <TextView
+                android:id="@+id/tvServiceDetailsLastVisitResultTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvServiceDetailsLastVisitTxt"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/circular_std_book"
+                android:maxLines="1"
+                android:text="@string/result_of_the_visit_label_register_visit"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvServiceDetailsLastVisitResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvServiceDetailsLastVisitTxt"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/tvServiceDetailsLastVisitResultTxt"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="end"
+                android:fontFamily="@font/circular_std_book"
+                android:maxLines="3"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp"
+                android:text="@string/dash_label" />
+
+   <!--         <TextView
+                android:id="@+id/tvServiceDetailsAccountNumberTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvServiceDetailsLastVisitResultTxt"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/circular_std_book"
+                android:maxLines="1"
+                android:text="@string/account_number_label_bank_data"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvServiceDetailsAccountNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvServiceDetailsLastVisitResultTxt"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/circular_std_book"
+                android:maxLines="1"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp"
+                android:text="123801289301928" />
+-->
+            <TextView
+                android:id="@+id/tvServiceDetailsCommentsTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvServiceDetailsLastVisitResult"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/circular_std_book"
+                android:maxLines="1"
+                android:text="@string/comments_label_register_visit"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnServiceDetailsSeeAll"
+                style="@style/AccentColorBorderButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_below="@id/tvServiceDetailsLastVisitResult"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/see_all_label_register_visit"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/llRegisterVisit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:layout_below="@id/btnServiceDetailsSeeAll"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp">
+
+            <TextView
+                android:id="@+id/tvServiceDetailsPaymentNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circular_std_bold"
+                android:text="@string/generate_payment_notification_label_register_visit"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/btnServiceDetailsRegisterVisit"
+                style="@style/BlueGradientButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/register_visit_label" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

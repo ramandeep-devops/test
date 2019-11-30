@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white">
+    <Toolbar
+        android:id="@+id/tbrAllComments"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/img_toolbar_back"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:navigationIcon="@drawable/ic_back_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/circular_std_bold"
+            android:text="@string/comments_label_register_visit"
+            android:paddingBottom="8dp"
+            android:gravity="start"
+            android:textSize="18sp"
+            />
+    </Toolbar>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srlAllComments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+
+
+    <ViewFlipper
+        android:id="@+id/vfAllComments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/pgbAllComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tvNoComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0.7"
+            android:text="@string/no_comment_found_error"
+            android:textColor="@color/main_text_color"
+            android:textSize="16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAllComments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="16dp"
+            android:clipToPadding="false" />
+    </ViewFlipper>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

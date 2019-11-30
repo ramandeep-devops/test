@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="22dp">
+
+        <TextView
+            android:id="@+id/tvMyAddressStreetTxt"
+            style="@style/LoginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="2dp"
+            android:text="@string/street_label_my_address" />
+
+        <EditText
+            android:id="@+id/etMyAddressStreet"
+            style="@style/LoginEditText"
+            android:theme="@style/LoginEditTextYellowTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMyAddressStreetTxt"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            tools:ignore="Autofill,LabelFor" />
+
+        <LinearLayout
+            android:id="@+id/llMyAddressExteriorInterior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etMyAddressStreet"
+            android:layout_marginTop="24dp"
+            android:baselineAligned="true"
+
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMyAddressExteriorNoTxt"
+                    style="@style/LoginTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exterior_no_label_my_address" />
+
+                <EditText
+                    android:id="@+id/etMyAddressExteriorNo"
+                    style="@style/LoginEditText"
+                    android:theme="@style/LoginEditTextYellowTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    tools:ignore="Autofill,LabelFor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMyAddressInteriorNoTxt"
+                    style="@style/LoginTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="2dp"
+
+                    android:layout_height="wrap_content"
+                    android:text="@string/interior_no_label_my_address" />
+
+                <EditText
+                    android:id="@+id/etMyAddressInteriorNo"
+                    style="@style/LoginEditText"
+                    android:theme="@style/LoginEditTextYellowTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    tools:ignore="Autofill,LabelFor" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMyAddressPostalCodeTxt"
+            style="@style/LoginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llMyAddressExteriorInterior"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="2dp"
+            android:text="@string/postal_code_label_my_address" />
+
+        <EditText
+            android:id="@+id/etMyAddressPostalCode"
+            style="@style/LoginEditText"
+            android:theme="@style/LoginEditTextYellowTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMyAddressPostalCodeTxt"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="10"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/tvMyAddressColonyTxt"
+            style="@style/LoginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etMyAddressPostalCode"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            android:layout_marginStart="2dp"
+            android:text="@string/colony_label_my_address" />
+
+        <TextView
+            android:id="@+id/etMyAddressColony"
+            style="@style/LoginEditText"
+            android:theme="@style/LoginEditTextYellowTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMyAddressColonyTxt"
+            android:drawableEnd="@drawable/ic_dropdown"
+            android:drawablePadding="4dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingEnd="4dp"
+            android:paddingStart="0dp"
+            android:visibility="gone"
+            />
+        <View
+            android:id="@+id/viewBelowColony"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/etMyAddressColony"
+            android:alpha="0.4"
+            android:layout_marginTop="2dp"
+            android:background="@color/term_conditions_label_color"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:id="@+id/tvMyAddressStateTxt"
+            style="@style/LoginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewBelowColony"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="2dp"
+            android:text="@string/state_label_my_address" />
+
+        <EditText
+            android:id="@+id/etMyAddressState"
+            style="@style/LoginEditText"
+            android:theme="@style/LoginEditTextYellowTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMyAddressStateTxt"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="50"
+            tools:ignore="Autofill,LabelFor" />
+
+
+
+        <TextView
+            android:id="@+id/tvMyAddressCityTxt"
+            style="@style/LoginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etMyAddressState"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="2dp"
+            android:text="@string/city_label_my_address" />
+
+
+        <EditText
+            android:id="@+id/etMyAddressCity"
+            style="@style/LoginEditText"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMyAddressCityTxt"
+            android:layout_marginTop="0dp"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="50"
+            android:theme="@style/LoginEditTextYellowTheme"
+            tools:ignore="Autofill,LabelFor" />
+
+
+        <TextView
+            android:id="@+id/tvMyAddressDelegationTxt"
+            style="@style/LoginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etMyAddressCity"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="2dp"
+            android:text="@string/delegation_or_municipality_label_my_address" />
+
+
+
+        <EditText
+            android:id="@+id/etMyAddressDelegation"
+            style="@style/LoginEditText"
+            android:theme="@style/LoginEditTextYellowTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMyAddressDelegationTxt"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLength="50"
+            tools:ignore="Autofill,LabelFor" />
+
+          <Button
+            android:id="@+id/btnMyAddressNext"
+            style="@style/BlueGradientButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etMyAddressDelegation"
+            android:layout_marginTop="56dp"
+            android:text="@string/next_btn_label_profile" />
+
+    </RelativeLayout>
+</ScrollView>

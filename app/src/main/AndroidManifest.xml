@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.codebrew.encober">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:name="com.codebrew.encober.EncoberApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/playstore_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/playstore_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+
+        <activity
+            android:name="com.codebrew.encober.ui.home.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.codebrew.encober.ui.splash.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.codebrew.encober.ui.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.codebrew.encober.ui.login.profileSetup.ProfileSetupActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.codebrew.encober.ui.serviceDetails.ServiceDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.codebrew.encober.ui.myServices.MyServicesActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.chat.ChatActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.myVideos.videoDetails.VideoDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection"/>
+        <activity android:name=".ui.splash.termConditions.WebViewActivity" />
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key" />
+
+        <service
+            android:name="com.codebrew.encober.utils.location.LocationUpdatesService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service android:name="com.codebrew.encober.ui.notifications.NotificationService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/playstore_icon_round" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/app_name" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.codebrew.encober.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/tbrRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:backgroundTint="@color/white"
+        android:navigationIcon="@drawable/ic_back"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tvRegisterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="4dp"
+            android:textColor="@color/main_text_color"
+            android:fontFamily="@font/circular_std_black"
+            android:text="@string/register_label_service_details"
+            android:textSize="18sp" />
+    </Toolbar>
+
+    <View
+        android:id="@+id/viewBelowTbr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.4"
+        android:background="@color/term_conditions_label_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvRegisterPromiseDateTxt"
+                style="@style/LoginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/promise_date_label_register_visit" />
+
+            <TextView
+                android:id="@+id/tvRegisterPromiseDate"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_calendar_bg"
+                android:hint="@string/choose_date_label_profile"
+                android:paddingStart="0dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="4dp" />
+
+            <View
+                android:id="@+id/viewBelowPromiseDate"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:alpha="0.4"
+                android:background="@color/term_conditions_label_color" />
+
+            <TextView
+                android:id="@+id/tvRegisterAmountTxt"
+                style="@style/LoginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/agreed_amount_label_register_visit" />
+
+            <EditText
+                android:id="@+id/etRegisterAmount"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/type_here_hint"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:theme="@style/LoginEditTextYellowTheme"
+                tools:ignore="Autofill,LabelFor" />
+
+            <TextView
+                android:id="@+id/tvRegisterSignatureTxt"
+                style="@style/LoginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/signature_of_the_promiser_label_register_visit" />
+
+            <com.github.gcacace.signaturepad.views.SignaturePad
+                android:id="@+id/signaturePadRegister"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/back_signature_pad"
+                app:penColor="@android:color/black"
+                app:penMaxWidth="7dp"
+                app:penMinWidth="3dp" />
+
+            <Button
+                android:id="@+id/btnClearSignature"
+                style="@style/AccentColorBorderButton"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/clear_pad_label_register_visit"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnRegisterVisit"
+                style="@style/BlueGradientButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:text="@string/register_visit_label" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="22dp"
+    android:backgroundTint="@color/white"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivBankDataLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bank"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="2dp"
+        android:contentDescription="@string/cdesc_bank_logo"
+        />
+    <TextView
+        android:id="@+id/tvBankDataBankTxt"
+        style="@style/LoginTextView"
+        android:layout_below="@id/ivBankDataLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="2dp"
+        android:text="@string/bank_label_bank_data" />
+
+    <TextView
+        android:id="@+id/etBankDataBank"
+        style="@style/LoginEditText"
+        android:layout_below="@id/tvBankDataBankTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:paddingEnd="4dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="0dp"
+        android:text="@string/select_bank_label_bank_data"
+        android:drawableEnd="@drawable/ic_dropdown"
+       />
+    <View
+        android:id="@+id/viewBelowBank"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/etBankDataBank"
+        android:alpha="0.4"
+        android:layout_marginTop="2dp"
+        android:background="@color/term_conditions_label_color" />
+
+    <TextView
+        android:id="@+id/tvBankDataAccountNoTxt"
+        style="@style/LoginTextView"
+        android:layout_below="@id/viewBelowBank"
+        android:layout_marginStart="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/account_number_label_bank_data" />
+
+    <EditText
+        android:id="@+id/etBankDataAccountNo"
+        style="@style/LoginEditText"
+        android:theme="@style/LoginEditTextYellowTheme"
+        android:layout_below="@id/tvBankDataAccountNoTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="18"
+        android:hint="@string/digits_18_hint_bank_data"
+        android:drawablePadding="4dp"
+        android:imeOptions="actionNext"
+        tools:ignore="Autofill,LabelFor" />
+
+
+    <Button
+        android:id="@+id/btnBankDataContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BlueGradientButton"
+        android:layout_alignParentBottom="true"
+        android:text="@string/continue_label_details_page"
+        />
+
+</RelativeLayout>

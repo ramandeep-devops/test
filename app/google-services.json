@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "733051696518",
+    "firebase_url": "https://encober-f3023.firebaseio.com",
+    "project_id": "encober-f3023",
+    "storage_bucket": "encober-f3023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733051696518:android:707be978690103106e6807",
+        "android_client_info": {
+          "package_name": "com.codebrew.encober"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733051696518-ts30erraqshsml7md9nledn1atb8pk91.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codebrew.encober",
+            "certificate_hash": "67ded67a1fd8f229750569a12fb14479e1844064"
+          }
+        },
+        {
+          "client_id": "733051696518-unfufbe8a7a1c8f2cgi9vup1gt0o70ev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAah-iK_pW8lIzt9278v34U8VjwDXR2fuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733051696518-unfufbe8a7a1c8f2cgi9vup1gt0o70ev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

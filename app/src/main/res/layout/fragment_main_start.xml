@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/colorF2F2F2"
+    android:background="@color/colorF2F2F2">
+
+    <Toolbar
+        android:id="@+id/tbrStart"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/img_toolbar_back"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:contentDescription="@string/cdesc_encober_logo"
+            android:src="@drawable/ic_logo_small" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchStartTop"
+            style="@style/SwitchCompatStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginEnd="20dp"
+            android:checked="true"
+            android:thumb="@drawable/switch_thumb_white" />
+    </Toolbar>
+
+    <RadioGroup
+        android:id="@+id/radioGroupTopStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:splitMotionEvents="false"
+        android:weightSum="3">
+
+        <RadioButton
+            android:id="@+id/radioBtnStartCollection"
+            style="@style/HomeTopRadioButtons"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_selector_home_top_collection"
+            android:drawablePadding="4dp"
+            android:text="@string/collection_label_main_top_radio" />
+
+
+        <RadioButton
+            android:id="@+id/radioBtnStartSurveys"
+            style="@style/HomeTopRadioButtons"
+            android:layout_marginStart="8dp"
+            android:drawableTop="@drawable/ic_selector_home_top_survey"
+            android:drawablePadding="4dp"
+            android:text="@string/surveys_label_main_top_radio" />
+
+        <RadioButton
+            android:id="@+id/radioBtnStartRecover"
+            style="@style/HomeTopRadioButtons"
+            android:layout_marginStart="8dp"
+            android:drawableTop="@drawable/ic_selector_home_top_recover"
+            android:drawablePadding="4dp"
+            android:text="@string/recover_label_main_top_radio" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvStartInactiveState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/ic_tower"
+        android:drawablePadding="8dp"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/main_text_color"
+        android:alpha="0.8"
+        android:text="@string/you_are_inactive_now_label_start"
+        />
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapViewStartFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tbrStart" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srlMapDataList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tbrStart"
+        android:visibility="gone">
+
+    <ViewFlipper
+        android:id="@+id/vfMapDataList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorF2F2F2"
+       >
+
+        <ProgressBar
+            android:id="@+id/pgbMapDataList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+             />
+
+        <TextView
+            android:id="@+id/tvMapListNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0.7"
+            android:text="@string/no_service_found_label_my_Services"
+            android:textColor="@color/main_text_color"
+            android:textSize="16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMapDataList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="54dp"
+            android:paddingBottom="90dp"
+            android:clipToPadding="false"
+            />
+
+    </ViewFlipper>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlStartMapMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp">
+
+        <ImageView
+            android:id="@+id/ivStartListIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:contentDescription="@string/cdesc_map_menu_icon"
+            android:src="@drawable/ic_map_list_blue" />
+
+        <Button
+            android:id="@+id/btnStartContinue"
+            style="@style/FullRoundedAccentColorButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_toStartOf="@id/ivStartMapIcon"
+            android:layout_toEndOf="@id/ivStartListIcon"
+            android:text="@string/continue_label_details_page"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/ivStartMapIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/cdesc_map_track_icon"
+            android:src="@drawable/ic_map_white" />
+    </RelativeLayout>
+</RelativeLayout>

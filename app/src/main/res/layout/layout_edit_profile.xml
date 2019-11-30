@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white">
+
+    <Toolbar
+        android:id="@+id/tbrEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:navigationIcon="@drawable/ic_back">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/circular_std_black"
+            android:text="@string/edit_profile_label"
+            android:textColor="@color/main_text_color"
+            android:textSize="20sp" />
+    </Toolbar>
+
+    <View
+        android:id="@+id/viewBelowTbr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tbrEditProfile"
+        android:alpha="0.3"
+        android:background="@color/main_text_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewBelowTbr">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="22dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="22dp"
+            android:paddingBottom="24dp">
+
+
+            <FrameLayout
+                android:id="@+id/flEditProfileDp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                >
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivEditProfileDp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@color/greyImageBackground"
+                app:riv_border_color="@color/rounded_image_border_color"
+                app:riv_border_width="1dp"
+                app:riv_oval="true" />
+
+                <ImageView
+                    android:id="@+id/ivEditDp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit_photo"
+                    android:layout_gravity="end|bottom"
+                    android:padding="4dp"
+                    />
+            </FrameLayout>
+            
+
+            <TextView
+                android:id="@+id/tvEditProfileID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circular_std_book"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp"
+                android:layout_below="@id/flEditProfileDp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                tools:text="ID : 123456" />
+
+            <TextView
+                android:id="@+id/tvEditProfileEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circular_std_book"
+                android:textColor="@color/main_text_color"
+                android:textSize="16sp"    
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/tvEditProfileID"
+                android:layout_centerHorizontal="true"
+                tools:text="anitanthakur@hotmail.com" />
+        
+
+
+            <LinearLayout
+                android:id="@+id/llEditProfileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEditProfileEmail"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvEditProfileFirstNameTxt"
+                        style="@style/LoginTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="First Name" />
+
+                    <EditText
+                        android:id="@+id/etEditProfileFirstName"
+                        style="@style/LoginEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:theme="@style/LoginEditTextYellowTheme"
+                        tools:ignore="Autofill,LabelFor" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvEditProfileLastNameTxt"
+                        style="@style/LoginTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="Last Name" />
+
+                    <EditText
+                        android:id="@+id/etEditProfileLastName"
+                        style="@style/LoginEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:theme="@style/LoginEditTextYellowTheme"
+                        tools:ignore="Autofill,LabelFor" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvEditProfileDOBTxt"
+                style="@style/LoginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llEditProfileName"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/date_of_birth_label_profile" />
+
+            <TextView
+                android:id="@+id/tvEditProfileDOB"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEditProfileDOBTxt"
+                android:layout_marginStart="2dp"
+                android:drawableEnd="@drawable/ic_calendar_bg"
+                android:paddingStart="0dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="4dp" />
+
+            <View
+                android:id="@+id/viewBelowDOB"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvEditProfileDOB"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:alpha="0.4"
+                android:background="@color/main_text_color" />
+
+
+            <TextView
+                android:id="@+id/tvEditProfileStreetTxt"
+                style="@style/LoginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewBelowDOB"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/street_label_my_address" />
+
+            <EditText
+                android:id="@+id/etEditProfileStreet"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEditProfileStreetTxt"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:theme="@style/LoginEditTextYellowTheme"
+                tools:ignore="Autofill,LabelFor" />
+
+            <LinearLayout
+                android:id="@+id/llEditProfileExteriorInterior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEditProfileStreet"
+                android:layout_marginTop="24dp"
+                android:baselineAligned="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvEditProfileExteriorNoTxt"
+                        style="@style/LoginTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/exterior_no_label_my_address" />
+
+                    <EditText
+                        android:id="@+id/etEditProfileExteriorNo"
+                        style="@style/LoginEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:theme="@style/LoginEditTextYellowTheme"
+                        tools:ignore="Autofill,LabelFor" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvEditProfileInteriorNoTxt"
+                        style="@style/LoginTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/interior_no_label_my_address" />
+
+                    <EditText
+                        android:id="@+id/etEditProfileInteriorNo"
+                        style="@style/LoginEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:theme="@style/LoginEditTextYellowTheme"
+                        tools:ignore="Autofill,LabelFor" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEditProfilePostalCodeTxt"
+                style="@style/LoginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llEditProfileExteriorInterior"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/postal_code_label_my_address" />
+
+            <EditText
+                android:id="@+id/etEditProfilePostalCode"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEditProfilePostalCodeTxt"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:theme="@style/LoginEditTextYellowTheme"
+                tools:ignore="Autofill,LabelFor" />
+
+            <TextView
+                android:id="@+id/tvEditProfileStateTxt"
+                style="@style/LoginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEditProfilePostalCode"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/state_label_my_address" />
+
+            <EditText
+                android:id="@+id/etEditProfileState"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEditProfileStateTxt"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                android:theme="@style/LoginEditTextYellowTheme"
+                tools:ignore="Autofill,LabelFor" />
+
+
+            <TextView
+                android:id="@+id/tvEditProfileCityTxt"
+                style="@style/LoginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEditProfileState"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/city_label_my_address" />
+
+
+            <EditText
+                android:id="@+id/etEditProfileCity"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEditProfileCityTxt"
+                android:layout_marginTop="0dp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                android:theme="@style/LoginEditTextYellowTheme"
+                tools:ignore="Autofill,LabelFor" />
+
+
+            <TextView
+                android:id="@+id/tvEditProfileDelegationTxt"
+                style="@style/LoginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEditProfileCity"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/delegation_or_municipality_label_my_address" />
+
+
+            <EditText
+                android:id="@+id/etEditProfileDelegation"
+                style="@style/LoginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEditProfileDelegationTxt"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="50"
+                android:theme="@style/LoginEditTextYellowTheme"
+                tools:ignore="Autofill,LabelFor" />
+
+
+            <Button
+                android:id="@+id/btnEditProfileSave"
+                style="@style/BlueGradientButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEditProfileDelegation"
+                android:layout_marginTop="48dp"
+                android:text="@string/save_label_change_password" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

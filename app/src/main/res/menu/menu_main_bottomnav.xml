@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_selector_main_start"
+        android:id="@+id/item_start"
+        android:checked="true"
+        android:title="@string/start_label_main"/>
+
+    <item android:icon="@drawable/ic_selector_main_my_account"
+        android:id="@+id/item_my_account"
+        android:checked="false"
+        android:title="@string/my_account_label_main"/>
+
+    <item android:icon="@drawable/ic_selector_main_notifications"
+        android:id="@+id/item_notifications"
+        android:checked="false"
+        android:title="@string/notifications_label_main"/>
+
+    <item android:icon="@drawable/ic_selector_main_profile"
+        android:id="@+id/item_profile"
+        android:checked="false"
+        android:title="@string/profile_label_main"/>
+</menu>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:backgroundTint="@color/colorF2F2F2"
+    android:background="@color/colorF2F2F2"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:id="@+id/tbrMyVideos"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/img_toolbar_back"
+        android:elevation="4dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:text="@string/my_videos_label_main"
+            android:fontFamily="@font/circular_std_bold"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            />
+
+    </Toolbar>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srlMyVideos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ViewFlipper
+        android:id="@+id/vfMyVideos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ProgressBar
+            android:id="@+id/pgbMyVideos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tvMyVideosNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0.7"
+            android:text="@string/no_video_found_label_youtube_videos"
+            android:textColor="@color/main_text_color"
+            android:textSize="16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMyVideos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="16dp"
+            android:clipToPadding="false"
+            />
+    </ViewFlipper>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvItemCommentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            tools:text="Anitan Thakur" />
+
+        <TextView
+            android:id="@+id/tvItemCommentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/main_text_color_60_alpha"
+            android:textSize="12sp"
+            tools:text="2min ago"
+            />
+
+        <TextView
+            android:id="@+id/tvItemCommentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemCommentName"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@id/tvItemCommentTime"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textColor="@color/main_text_color"
+            android:textSize="14sp"
+            tools:text="Really nice company and the people hare are very cool." />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tvItemCommentText"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:alpha="0.1"
+            android:background="@color/black" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
